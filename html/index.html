@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Police Dispatch</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Control Panel (מוסתר כברירת מחדל) -->
+    <div id="panel" class="panel" style="display: none;">
+        <div class="panel-header">
+            <div class="header-title">
+                <div class="title-icon">🎯</div>
+                <h2>מערכת ניהול מוקדן</h2>
+            </div>
+            <button id="closePanel" class="btn-close">✕</button>
+        </div>
+        
+        <div class="panel-content">
+            <div class="control-section">
+                <label class="control-label">מספר תג</label>
+                <div class="input-group">
+                    <input type="text" id="tagInput" placeholder="הזן תג (לדוגמה: מ-1)">
+                    <button id="saveTag" class="btn-primary">שמור</button>
+                </div>
+            </div>
+
+            <div class="control-section">
+                <label class="control-label">הגדרות תצוגה</label>
+                <div class="button-group">
+                    <button id="toggleList" class="btn-secondary">
+                        <span class="btn-icon">👁️</span>
+                        כניסה לתפקיד
+                    </button>
+                    <button id="fontUp" class="btn-secondary">
+                        <span class="btn-icon">🔍</span>
+                        הגדל
+                    </button>
+                    <button id="fontDown" class="btn-secondary">
+                        <span class="btn-icon">🔍</span>
+                        הקטן
+                    </button>
+                    <button id="opacityUp" class="btn-secondary">
+                        <span class="btn-icon">🌙</span>
+                        שקוף יותר
+                    </button>
+                    <button id="opacityDown" class="btn-secondary">
+                        <span class="btn-icon">☀️</span>
+                        אטום יותר
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Police List - נראה כברירת מחדל -->
+    <div id="policeList" class="police-list" style="display: flex;">
+        <div class="list-header">
+            <div class="list-title">
+                <span class="pulse-dot"></span>
+                <h3>שוטרים פעילים</h3>
+            </div>
+            <div class="list-stats">
+                <span id="totalOfficers">0</span>
+            </div>
+        </div>
+        <div id="listContent" class="list-content"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
